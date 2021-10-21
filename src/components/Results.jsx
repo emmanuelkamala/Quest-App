@@ -6,7 +6,7 @@ import { useResultContext } from '../contexts/ResultContextProvider';
 import Loading from './Loading';
 
 const Results = () => {
-  const { results, isLoading, getResults, searchTerm, setSearchTerm } = useResultContext();
+  const { results, isLoading, getResults, searchTerm } = useResultContext();
   const location = useLocation();
 
   useEffect(()=> {
@@ -29,10 +29,10 @@ const Results = () => {
            <div key={index} className="md:w-2/5 w-full">
              <a href={link} target="_blank" rel="noreferrer">
                <p className="text-sm">
-                 { link.length > 30 ? link.substring(0, 30) : link }
+                 { link?.length > 30 ? link.substring(0, 30) : link }
                </p>
                <p className="text-sm text-gray-500">
-                 { description.length > 90 ? description.substring(0, 90) : description }
+                 { description?.length > 90 ? description.substring(0, 90) : description }
                </p>
                <p className="text-lg text-blue-700 hover:underline dark:text-blue-300">
                   { title }

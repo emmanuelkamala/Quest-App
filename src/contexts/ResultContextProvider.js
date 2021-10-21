@@ -6,7 +6,7 @@ const baseURL = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('Jeff Bezos');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const getResults = async (type) => {
     setIsLoading(true);
@@ -16,7 +16,7 @@ export const ResultContextProvider = ({ children }) => {
       headers: {
         'x-user-agent': 'desktop',
         'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-        'x-rapidapi-key': '655b2eee08mshc0d3ddf1b186156p198a22jsn76407c2e3981'
+        'x-rapidapi-key': process.env.SEARCH_API
       }
     });
 
