@@ -2,7 +2,7 @@
 
 This is an app that users Google search API to return searches of different searched terms. You can search for images, news and videos. You can toggle between a lighter theme or a darker one.
 
-![screenshot](./public/images/1.png)
+![screenshot](./public/images/1.png) <br />
 ![screenshot](./public/images/2.png)
 
 # Live Demo
