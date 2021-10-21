@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Routes = () => {
+const Footer = () => {
   return (
     <div>
       <h1>footer</h1>
@@ -8,4 +8,4 @@ const Routes = () => {
   )
 }
 
-export default Routes
+export default Footer;
