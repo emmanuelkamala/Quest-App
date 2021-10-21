@@ -82,7 +82,7 @@ const Results = () => {
           {
             results.map((video, index) => (
               <div className="p-2" key={index}>
-                <ReactPlayer url={video.additional_links[0].href} controls width="355px" height="200px" />
+                {video?.additional_links?.[0]?.href && <ReactPlayer url={video.additional_links?.[0].href} controls width="355px" height="200px" />}
               </div>
             ))
           }
