@@ -8,7 +8,7 @@ export const ResultContexProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const getResults = (type) => {
+  const getResults = async (type) => {
     setIsLoading(true);
 
     const response = await fetch(`${baseURL}${type}`, {
@@ -20,7 +20,7 @@ export const ResultContexProvider = ({ children }) => {
       }
     });
 
-    const data = response.json();
+    const data = await response.json();
 
     setResults(data);
     setIsLoading(false);
