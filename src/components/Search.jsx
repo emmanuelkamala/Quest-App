@@ -17,7 +17,7 @@ const Search = () => {
       <input 
         value={text}
         type="text"
-        className="sm:w-60 w-144 h-10 dark:bg-gray-200 border rounded-xl shadow-sm outline-none p-6 text-black hover:shadow-lg"
+        className="sm:w-144 w-60 h-10 dark:bg-gray-200 border rounded-xl shadow-sm outline-none p-6 text-black hover:shadow-lg"
         placeholder="Search..."
         onChange={ e => setText(e.target.value)}
       />
